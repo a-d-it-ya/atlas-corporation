@@ -94,8 +94,8 @@
 
   /* TOWER */
   .tower-section { max-width: 1300px; margin: 0 auto; padding: 6rem 2rem; border-top: 0.5px solid var(--border); }
-  .tower-image-wrap { position: relative; width: 100%; height: 720px; overflow: hidden; margin-bottom: 3rem; border: 0.5px solid var(--border); }
-  .tower-image-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 75%; filter: brightness(0.85) contrast(1.05); }
+  .tower-image-wrap { position: relative; width: 100%; height: 600px; overflow: hidden; margin-bottom: 3rem; border: 0.5px solid var(--border); }
+  .tower-image-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; filter: brightness(0.85) contrast(1.05); }
   .tower-image-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(20,20,20,0.6) 0%, transparent 50%, rgba(20,20,20,0.3) 100%); }
   .tower-image-label { position: absolute; bottom: 1rem; left: 1rem; font-family: var(--mono); font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; }
   .tower-image-unit { position: absolute; bottom: 1rem; right: 1rem; font-family: var(--mono); font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; }
@@ -130,11 +130,33 @@
   footer { border-top: 0.5px solid var(--border); padding: 2rem; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; color: var(--text3); letter-spacing: 0.08em; }
 
   @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; } .hero-right { display: none; }
+    .hero { grid-template-columns: 1fr; padding-top: 70px; }
+    .hero-right { display: none; }
+    .hero-headline { font-size: clamp(38px, 11vw, 72px); }
     .problem-grid, .pillars { grid-template-columns: 1fr; }
     .solution-layout, .tower-layout, .contact-layout { grid-template-columns: 1fr; }
     nav .nav-links { display: none; }
-    .tower-image-wrap { height: 360px; }
+    nav { padding: 0 1rem; gap: 8px; }
+    .nav-time { display: none; }
+    .nav-logo-text { font-size: 11px; letter-spacing: 0.08em; }
+    .btn-cta { padding: 5px 10px; font-size: 10px; white-space: nowrap; }
+    .tower-image-wrap { height: 420px; }
+    section { padding: 4rem 1.2rem; }
+    .tower-section { padding: 4rem 1.2rem; }
+    .section-headline { font-size: clamp(28px, 7vw, 42px); margin-bottom: 2rem; }
+    .hero-sub { font-size: 15px; }
+    .spec-grid { grid-template-columns: 1fr; }
+    .capability-row { grid-template-columns: repeat(3,1fr); }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.5rem 1rem; }
+    .contact-right { margin-top: 2rem; }
+    .vision-body { font-size: 17px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-headline { font-size: clamp(34px, 10vw, 52px); }
+    .nav-logo svg { height: 26px; }
+    .tower-image-wrap { height: 320px; }
+    .problem-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
