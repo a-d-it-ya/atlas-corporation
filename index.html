@@ -373,7 +373,7 @@
     const str = ist.getUTCFullYear()+'-'+pad(ist.getUTCMonth()+1)+'-'+pad(ist.getUTCDate())+' '+pad(ist.getUTCHours())+':'+pad(ist.getUTCMinutes())+':'+pad(ist.getUTCSeconds())+' IST';
     document.getElementById('navTime').textContent = str;
     document.getElementById('termTime').textContent = str;
-    document.getElementById('footTime').textContent = 'SYS.TIME: '+pad(now.getUTCHours())+':'+pad(now.getUTCMinutes())+':'+pad(now.getUTCSeconds())+'Z';
+    document.getElementById('footTime').textContent = str;
   }
   updateTime();
   setInterval(updateTime, 1000);
