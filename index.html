@@ -369,7 +369,8 @@
   function updateTime() {
     const now = new Date();
     const pad = n => String(n).padStart(2,'0');
-    const str = now.getUTCFullYear()+'-'+pad(now.getUTCMonth()+1)+'-'+pad(now.getUTCDate())+' '+pad(now.getUTCHours())+':'+pad(now.getUTCMinutes())+':'+pad(now.getUTCSeconds())+'Z';
+    const ist = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
+    const str = ist.getUTCFullYear()+'-'+pad(ist.getUTCMonth()+1)+'-'+pad(ist.getUTCDate())+' '+pad(ist.getUTCHours())+':'+pad(ist.getUTCMinutes())+':'+pad(ist.getUTCSeconds())+' IST';
     document.getElementById('navTime').textContent = str;
     document.getElementById('termTime').textContent = str;
     document.getElementById('footTime').textContent = 'SYS.TIME: '+pad(now.getUTCHours())+':'+pad(now.getUTCMinutes())+':'+pad(now.getUTCSeconds())+'Z';
